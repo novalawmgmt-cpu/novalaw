@@ -467,6 +467,212 @@
       line-height: 1.8;
     }
 
+    /* ── SUCCESS CASE ── */
+    .success-case {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .success-badge {
+      display: inline-block;
+      background: #1a7a3c;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+
+    .success-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .success-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .success-doc-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .success-doc-img {
+      max-width: 480px;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      cursor: zoom-in;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .success-doc-img.zoomed {
+      max-width: 100%;
+      cursor: zoom-out;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    }
+
+    .success-doc-caption {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── CASE REPORT ── */
+    .report-section {
+      grid-column: 1 / -1;
+      border-top: 3px solid var(--primary);
+      margin-top: 12px;
+      padding-top: 32px;
+    }
+
+    .report-section > h2 {
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .callout {
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .callout.warn  { background: #fff8ed; border-left: 4px solid var(--accent); color: #7a5c00; }
+    .callout.danger { background: #fdf0ef; border-left: 4px solid #c0392b; color: #7a1a1a; }
+    .callout.info  { background: #eef4fb; border-left: 4px solid #1a4a80; color: #1a4a80; }
+
+    .tl-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+    .tl-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      min-width: 140px;
+    }
+    .tl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--primary);
+    }
+    .tl-dot.red { background: #c0392b; border-color: #c0392b; }
+    .tl-date  { font-size: 0.78rem; font-weight: 700; color: var(--primary); }
+    .tl-label { font-size: 0.71rem; color: var(--muted); text-align: center; }
+    .tl-line  { height: 2px; width: 60px; background: var(--border); margin-bottom: 16px; }
+
+    .issue-block { margin-bottom: 24px; }
+    .issue-block:last-child { margin-bottom: 0; }
+    .issue-label {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: var(--light);
+      border: 1px solid var(--border);
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .issue-title { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .issue-body  { font-size: 0.88rem; color: var(--text); line-height: 1.8; margin-bottom: 10px; }
+
+    .sub-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sub-list li {
+      font-size: 0.86rem;
+      background: var(--light);
+      border-radius: 6px;
+      padding: 10px 14px;
+      border-left: 3px solid var(--border);
+      line-height: 1.7;
+    }
+    .sub-list li.ok     { border-left-color: #27ae60; background: #f0faf4; }
+    .sub-list li.warn   { border-left-color: var(--accent); background: #fff8ed; }
+    .sub-list li.danger { border-left-color: #c0392b; background: #fdf0ef; }
+
+    .action-group { margin-bottom: 24px; }
+    .action-group:last-child { margin-bottom: 0; }
+    .action-group-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #fff;
+      background: var(--primary);
+      padding: 4px 14px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .action-steps { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .action-steps li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.88rem; line-height: 1.75; }
+    .action-steps li .num {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 3px;
+    }
+
+    .sent-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    .sent-table th {
+      background: var(--primary); color: #fff;
+      padding: 9px 14px; text-align: left;
+      font-weight: 600; font-size: 0.78rem; letter-spacing: 0.04em;
+    }
+    .sent-table td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.7; }
+    .sent-table tr:last-child td { border-bottom: none; }
+    .sent-table tr:nth-child(even) td { background: var(--light); }
+
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+    .tag.red    { background: #fdf0ef; color: #c0392b; }
+    .tag.yellow { background: #fff8ed; color: #b35c00; }
+    .tag.green  { background: #f0faf4; color: #1a7a3c; }
+
+    .summary-box {
+      background: linear-gradient(135deg, var(--primary), #2d4a6e);
+      color: #fff;
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin-top: 4px;
+    }
+    .summary-box .summary-title { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 12px; }
+    .summary-box p { font-size: 0.9rem; line-height: 1.85; opacity: 0.92; }
+
+    .report-divider {
+      grid-column: 1 / -1;
+      border: none;
+      border-top: 2px dashed var(--border);
+      margin: 8px 0 4px;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
       .hero-inner {
@@ -693,6 +899,121 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- 성공사례 -->
+  <div class="card full-width">
+    <h2><span class="icon">🏆</span> 성공사례</h2>
+    <div class="success-case">
+      <div class="success-badge">불송치 결정 (혐의없음)</div>
+      <div class="success-info">
+        <div class="success-title">보이스피싱 사기방조 · 전자금융거래법위반</div>
+        <p class="success-desc">의뢰인이 보이스피싱 범행과의 연관성을 인식하지 못하였음을 소명하여 경찰 단계에서 <strong>불송치(혐의없음)</strong> 결정을 이끌어냈습니다. 검찰 송치 없이 사건이 종결되었습니다.</p>
+      </div>
+      <div class="success-doc-wrap">
+        <img
+          src="result-leesuho.png"
+          alt="불송치 결정서 - 보이스피싱 사기방조 혐의없음"
+          class="success-doc-img"
+          onclick="this.classList.toggle('zoomed')"
+        />
+        <p class="success-doc-caption">※ 개인정보 보호를 위해 일부 내용이 가려져 있습니다. 클릭 시 확대됩니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- 사건 검토 보고서                        -->
+  <!-- ════════════════════════════════════ -->
+  <hr class="report-divider">
+
+  <div class="card full-width report-section">
+    <h2><span class="icon">📁</span> 사건 검토 보고서 — 전기통신금융사기 사기이용계좌 지급정지</h2>
+
+    <!-- 타임라인 -->
+    <div class="tl-bar">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2026. 4. 9.</div>
+        <div class="tl-label">도박사이트<br>마지막 환전금 수령</div>
+      </div>
+      <div class="tl-line"></div>
+      <div class="tl-item">
+        <div class="tl-dot red"></div>
+        <div class="tl-date">2026. 4. 12. 18:30</div>
+        <div class="tl-label">사기이용계좌 지정<br>지급정지 문자 수신</div>
+      </div>
+    </div>
+
+    <!-- 사건 경위 -->
+    <div class="callout warn">
+      의뢰인은 2026년 4월 9일 도박사이트로부터 마지막 환전금을 수령하였고,
+      2026년 4월 12일 18:30경 해당 계좌가 <strong>전기통신금융사기 사기이용계좌로 접수</strong>되었다는 문자를 수신하였습니다.
+      도박사이트 운영자 또는 관련자가 보이스피싱 피해금을 도박사이트 계좌로 유입시킨 후 환전하는 방식으로 자금세탁에 활용하는 사례가 실무상 빈번하게 발생하고 있으며, 의뢰인이 이러한 구조에 연루되었을 가능성이 있습니다.
+    </div>
+  </div>
+
+  <!-- 법적 쟁점 -->
+  <div class="card full-width">
+    <h2><span class="icon">⚖️</span> 법적 쟁점 및 판단</h2>
+
+    <div class="issue-block">
+      <div class="issue-label">쟁점 ①</div>
+      <div class="issue-title">지급정지의 적법성</div>
+      <p class="issue-body">금융기관은 피해구제 신청이 접수되면 사기이용계좌로 의심할 만한 사정이 있다고 인정되는 경우 계좌 전부에 대해 즉시 지급정지 조치를 취할 의무가 있습니다. 의뢰인이 실제 보이스피싱 범행에 가담하지 않았더라도, 피해금이 의뢰인 계좌를 경유하였다면 <strong>지급정지 자체는 적법</strong>하게 이루어진 것으로 볼 수 있습니다.</p>
+    </div>
+
+    <div class="issue-block">
+      <div class="issue-label">쟁점 ②</div>
+      <div class="issue-title">의뢰인의 형사책임 가능성</div>
+      <p class="issue-body">가장 중요한 쟁점입니다. 의뢰인이 도박사이트 환전금을 수령한 경위에 따라 형사책임 여부가 달라집니다.</p>
+      <ul class="sub-list">
+        <li class="ok"><strong>단순 도박사이트 이용자로서 환전을 받은 경우</strong><br>보이스피싱 범행과의 연관성을 인식하지 못하였다면 형사책임이 없을 가능성이 높습니다. 다만 수사기관은 계좌 거래내역을 면밀히 분석할 것입니다.</li>
+        <li class="warn"><strong>도박사이트 운영·관리에 관여한 경우</strong><br>도박공간개설, 국민체육진흥법 위반 등 별도의 형사책임이 문제될 수 있습니다.</li>
+        <li class="danger"><strong>보이스피싱 조직과 공모하거나 자금세탁에 가담한 경우</strong><br>전기통신금융사기 공범 또는 범죄수익은닉 혐의가 성립할 수 있으며, 이 경우 <strong>1년 이상의 징역형</strong>이 선고될 수 있습니다.</li>
+      </ul>
+    </div>
+
+    <div class="issue-block">
+      <div class="issue-label">쟁점 ③</div>
+      <div class="issue-title">횡령죄 성립 여부</div>
+      <p class="issue-body">보이스피싱 피해금이 계좌에 입금된 사실을 알면서 이를 인출·소비한 경우 <strong>횡령죄</strong>가 성립할 수 있습니다. 다만 의뢰인이 보이스피싱 공범인 경우에는 사기죄만 성립하고 별도의 횡령죄는 성립하지 않습니다.</p>
+    </div>
+
+    <div class="issue-block">
+      <div class="issue-label">쟁점 ④</div>
+      <div class="issue-title">민사상 부당이득반환 책임</div>
+      <p class="issue-body">형사책임과 별개로, 의뢰인 계좌에 입금된 보이스피싱 피해금 상당액에 대해 피해자로부터 <strong>부당이득반환 청구</strong>를 받을 가능성이 있습니다.</p>
+    </div>
+  </div>
+
+  <!-- 대응 방안 -->
+  <div class="card full-width">
+    <h2><span class="icon">📋</span> 실무적 대응 방안 (Action Plan)</h2>
+
+    <div class="action-group">
+      <div class="action-group-title">즉시 조치</div>
+      <ol class="action-steps">
+        <li><span class="num">1</span><span><strong>계좌 거래내역 전체 확보</strong> — 도박사이트와의 거래 경위, 환전 수령 경위를 입증할 수 있는 자료(입출금 내역, 이용 기록, 채팅 내역 등)를 즉시 확보하십시오.</span></li>
+        <li><span class="num">2</span><span><strong>금융기관에 이의신청 준비</strong> — 지급정지에 이의가 있는 경우 금융감독원 또는 해당 금융기관에 이의신청 가능. 단, 도박사이트 이용 자체가 불법임을 감안하면 소명이 오히려 불리하게 작용할 수 있으므로 <strong>신중하게 접근</strong>해야 합니다.</span></li>
+        <li><span class="num">3</span><span><strong>수사기관 연락 대비</strong> — 지급정지 이후 수사기관으로부터 참고인 또는 피의자 조사 요청이 올 수 있습니다. 조사 전 반드시 대응 방향을 사전에 정리하십시오.</span></li>
+        <li><span class="num">4</span><span><strong>도박사이트 관련 증거 보전</strong> — 환전 요청 및 수령 과정에 관한 모든 기록(문자, 카카오톡, 이메일 등)을 <strong>절대 삭제하지 말고</strong> 보전하십시오.</span></li>
+      </ol>
+    </div>
+
+    <div class="action-group">
+      <div class="action-group-title">중기 대응</div>
+      <ol class="action-steps">
+        <li><span class="num">1</span><span><strong>수사 대응 전략 수립</strong> — 의뢰인이 보이스피싱 범행을 전혀 인식하지 못하였다는 점을 일관되게 주장하고, 이를 뒷받침하는 객관적 자료를 준비하십시오.</span></li>
+        <li><span class="num">2</span><span><strong>피해자와의 합의 검토</strong> — 수사가 개시되어 형사책임이 문제될 경우, 피해자와의 합의가 양형에 유리하게 작용할 수 있습니다.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="summary-box" style="margin: 0 0 28px;">
+    <div class="summary-title">🔑 핵심 요약</div>
+    <p>의뢰인의 계좌가 지급정지된 것은 현행 제도상 불가피한 조치이며, <strong>형사책임 여부는 의뢰인이 보이스피싱 범행을 인식하였는지 여부</strong>에 달려 있습니다.<br><br>
+    도박사이트 환전 수령 경위에 관한 자료를 즉시 확보하고, 수사기관 조사에 대비한 일관된 대응 방향을 수립하는 것이 최우선 과제입니다.</p>
   </div>
 
   <!-- CTA -->
