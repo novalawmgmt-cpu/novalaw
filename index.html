@@ -508,17 +508,17 @@
     }
 
     .success-doc-img {
-      max-width: 480px;
+      display: block;
       width: 100%;
+      height: auto;
       border-radius: 10px;
       border: 1px solid var(--border);
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       cursor: zoom-in;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease;
     }
 
     .success-doc-img.zoomed {
-      max-width: 100%;
       cursor: zoom-out;
       box-shadow: 0 8px 40px rgba(0,0,0,0.2);
     }
